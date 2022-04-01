@@ -28,8 +28,6 @@ run : all
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
-$(LIBFT) : $(LIB_OBJS)
-	$(AR) $(ARFLAGS) $@ $?
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@

@@ -29,7 +29,7 @@ re : fclean all
 run : all
 	./$(NAME)
 
-$(NAME) : $(LIB) $(OBJ)
+$(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(INCLUDE) -L$(LIB_DIR) -l$(LIB_NAME) -o $@ $^
 
 $(LIB) :
